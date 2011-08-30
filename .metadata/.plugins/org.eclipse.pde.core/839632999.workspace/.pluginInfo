@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+	<bundle bundleID="772" class="hcpviewerplugin.HCPViewerPlugin" localization="OSGI-INF/l10n/bundle" name="HCPViewer Plug-in" project="HCPViewerPlugin" provider="Crew Project">
+		<library name="."/>
+		<library name="lib/hcpviewerpro.jar"/>
+	</bundle>
+	<bundle bundleID="771" class="clib.common.CommonLibPlugin" localization="OSGI-INF/l10n/bundle" name="CommonLibrary" project="CommonLibrary" provider="Yoshiaki Matsuzawa"/>
+</map>

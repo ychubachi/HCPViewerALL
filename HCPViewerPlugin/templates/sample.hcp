@@ -1,0 +1,26 @@
+\title 新規HCPチャート
+\author あなたの名前
+\version 1.0
+\date ${date}
+
+1レベル目の処理
+	2レベル目の処理
+		3レベル目の処理
+	\r 繰り返し処理
+		\b 脱出条件
+		 繰り返し処理の詳細手段１
+		 繰り返し処理の詳細手段２
+	\f 振り分け処理
+		\b 条件1
+			 振り分け処理1の詳細手段
+		\b 条件2
+			 振り分け処理2の詳細手段
+	\ec エラーチェック
+		\b　エラーチェックの内容
+			\ex (例外出口)
+	\call moduleA	
+
+\module moduleA
+moduleAをする
+	moduleAの2レベル目の処理１ \in A \out B
+	moduleAの2レベル目の処理２ \in B \out C, D

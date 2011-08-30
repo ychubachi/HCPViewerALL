@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            default="true"
+            extensions="hcp"
+            icon="icons/icon16.gif"
+            id="hcpviewerplugin.editors.HCPViewerLauncher"
+            launcher="hcpviewerplugin.editors.HCPViewerLauncher"
+            name="HCPViewer">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="HCPViewerPlugin_category"
+            name="HCP">
+      </category>
+      <wizard
+            category="HCPViewerPlugin.category"
+            class="hcpviewerplugin.wizards.NewHCPFileCreationWizard"
+            icon="icons/icon16.gif"
+            id="HCPViewerPlugin_wizard"
+            name="HCP Chart"
+            project="false">
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="HCPViewerPlugin_ActionSets"
+            label="HCPVIewerPlugin ActionSets"
+            visible="true">
+         <action
+               class="hcpviewerplugin.wizards.NewHCPFileCreationActionDelegate"
+               icon="icons/icon16.gif"
+               id="HCPViewerPlugin.createHCPAction"
+               label="Create HCP Chart"
+               menubarPath="hcpplugin_menu/group"
+               style="push"
+               toolbarPath="Normal/additions">
+         </action>
+         <menu
+               id="hcpplugin_menu"
+               label="HCP">
+            <groupMarker
+                  name="group">
+            </groupMarker>
+         </menu>
+      </actionSet>
+   </extension>
+
+</plugin>

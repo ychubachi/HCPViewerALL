@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+	<project default="create_run_jar" name="Create Runnable Jar for Project HCPViewerPro">
+		<tstamp>
+			<format property="now.time" pattern="yyyyMMddhhmm"/>
+		</tstamp>			
+	    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+	    <!--ANT 1.7 is required                                        -->
+	    <target name="create_run_jar">
+	        <jar destfile="package/hcpviewerpro.jar" filesetmanifest="mergewithoutmain">
+	            <manifest>
+	                <attribute name="Main-Class" value="application.HCPViewer"/>
+	                <attribute name="Class-Path" value="."/>
+	            </manifest>
+	            <fileset dir="bin"/>
+	            <fileset dir="../commonlibrary/bin"/>
+	            <fileset dir="../CEncodingDetector/bin"/>
+	        	<zipfileset excludes="META-INF/*.SF" src="../jibble-epsgraphics/epsgraphics.jar"/>
+	            <zipfileset excludes="META-INF/*.SF" src="../batik1.7/lib/batik-ext.jar"/>
+	            <zipfileset excludes="META-INF/*.SF" src="../batik1.7/lib/batik-dom.jar"/>
+	            <zipfileset excludes="META-INF/*.SF" src="../batik1.7/lib/batik-css.jar"/>
+	            <zipfileset excludes="META-INF/*.SF" src="../batik1.7/lib/batik-svg-dom.jar"/>
+	            <zipfileset excludes="META-INF/*.SF" src="../batik1.7/lib/batik-gvt.jar"/>
+	            <zipfileset excludes="META-INF/*.SF" src="../batik1.7/lib/batik-parser.jar"/>
+	            <zipfileset excludes="META-INF/*.SF" src="../batik1.7/lib/batik-script.jar"/>
+	            <zipfileset excludes="META-INF/*.SF" src="../batik1.7/lib/batik-bridge.jar"/>
+	            <zipfileset excludes="META-INF/*.SF" src="../batik1.7/lib/batik-anim.jar"/>
+	            <zipfileset excludes="META-INF/*.SF" src="../batik1.7/lib/batik-transcoder.jar"/>
+	            <zipfileset excludes="META-INF/*.SF" src="../batik1.7/lib/batik-awt-util.jar"/>
+	            <zipfileset excludes="META-INF/*.SF" src="../batik1.7/lib/batik-codec.jar"/>
+	            <zipfileset excludes="META-INF/*.SF" src="../batik1.7/lib/batik-util.jar"/>
+	            <zipfileset excludes="META-INF/*.SF" src="../batik1.7/lib/batik-xml.jar"/>
+	            <zipfileset excludes="META-INF/*.SF" src="../batik1.7/lib/xerces_2_5_0.jar"/>
+	            <zipfileset excludes="META-INF/*.SF" src="../batik1.7/lib/xml-apis.jar"/>
+	            <zipfileset excludes="META-INF/*.SF" src="../batik1.7/lib/xalan-2.6.0.jar"/>
+	            <zipfileset excludes="META-INF/*.SF" src="../batik1.7/lib/xml-apis-ext.jar"/>
+	            <zipfileset excludes="META-INF/*.SF" src="../batik1.7/lib/pdf-transcoder.jar"/>
+	            <zipfileset excludes="META-INF/*.SF" src="../batik1.7/lib/js.jar"/>            
+	            <zipfileset excludes="META-INF/*.SF" src="../batik1.7/lib/batik-swing.jar"/>
+	            <zipfileset excludes="META-INF/*.SF" src="../batik1.7/lib/batik-gui-util.jar"/>
+	        	<zipfileset excludes="META-INF/*.SF" src="../batik1.7/lib/batik-extension.jar"/>
+	        	<zipfileset excludes="META-INF/*.SF" src="../batik1.7/batik-rasterizer.jar"/>
+	            <zipfileset excludes="META-INF/*.SF" src="../batik1.7/batik-slideshow.jar"/>
+	            <zipfileset excludes="META-INF/*.SF" src="../batik1.7/batik-squiggle.jar"/>
+	            <zipfileset excludes="META-INF/*.SF" src="../batik1.7/batik-svgpp.jar"/>
+	            <zipfileset excludes="META-INF/*.SF" src="../batik1.7/lib/batik-svggen.jar"/>
+	            <zipfileset excludes="META-INF/*.SF" src="../batik1.7/batik-ttf2svg.jar"/>
+	            <zipfileset excludes="META-INF/*.SF" src="../batik1.7/batik.jar"/>        
+	        </jar>
+	    	
+	        	
+	        <zip destfile="hcpviewerpro-${now.time}.zip" encoding="MS932">
+	           	<fileset dir="package"/>
+	        </zip>    	
+	    </target>
+	</project>
